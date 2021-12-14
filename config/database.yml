@@ -1,0 +1,13 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  username: postgres
+  password: postgres1234
+  pool: 5
+development:
+  <<: *default
+  database: login_crud_development
+test:
+  <<: *default
+  database: login_crud_test
